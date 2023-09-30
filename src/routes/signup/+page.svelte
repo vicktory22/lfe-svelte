@@ -5,21 +5,22 @@
 
 	const clerkFrontendApi = `pk_${PUBLIC_CLERK_KEY}`;
 
-	let signInElement: any;
+	let signUpElement: any;
 
 	onMount(async () => {
 		const clerk = new Clerk(clerkFrontendApi);
-    console.log('first clerk', clerk);
-		await clerk.load();
-
-    console.log('clerk', clerk);
-
-		clerk.mountSignIn(signInElement, {
+		console.log('first clerk', clerk);
+		await clerk.load({
+			signInUrl: '/signin',
 			signUpUrl: '/signup',
 			afterSignInUrl: '/app',
-			redirectUrl: '/app'
+			afterSignUpUrl: '/app'
 		});
+
+		console.log('clerk', clerk);
+
+		clerk.mountSignUp(signUpElement);
 	});
 </script>
 
-<div bind:this={signInElement} />
+<div bind:this={signUpElement} />
