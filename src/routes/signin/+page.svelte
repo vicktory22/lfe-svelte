@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { PUBLIC_CLERK_KEY } from '$env/static/public';
+	import { PUBLIC_CLERK_KEY } from '$env/static/public';
 	import Clerk from '@clerk/clerk-js';
 	import { onMount } from 'svelte';
 
