@@ -1,5 +1,6 @@
 name = "lfe-svelte"
 compatibility_date = "2023-05-09"
+node_compat = true
 
 logpush = true
 
