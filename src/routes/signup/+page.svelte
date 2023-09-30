@@ -9,17 +9,13 @@
 
 	onMount(async () => {
 		const clerk = new Clerk(clerkFrontendApi);
-		console.log('first clerk', clerk);
-		await clerk.load({
+		await clerk.load();
+
+		clerk.mountSignUp(signUpElement, {
 			signInUrl: '/signin',
-			signUpUrl: '/signup',
-			afterSignInUrl: '/app',
-			afterSignUpUrl: '/app'
+			afterSignInUrl: '/',
+			redirectUrl: '/'
 		});
-
-		console.log('clerk', clerk);
-
-		clerk.mountSignUp(signUpElement);
 	});
 </script>
 
