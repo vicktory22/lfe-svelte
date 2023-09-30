@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev --host",
+		"dev": "dotenv -e .env.local -- vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -33,6 +33,14 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@clerk/backend": "^0.29.3",
+		"@clerk/clerk-js": "^4.58.2",
+		"@libsql/client": "^0.3.5",
+		"@sniptt/monads": "^0.5.10",
+		"date-fns": "^2.30.0",
+		"date-fns-tz": "^2.0.0",
+		"dotenv-cli": "^7.3.0",
+		"drizzle-orm": "^0.28.6",
 		"rippleui": "^1.12.1"
 	}
 }
