@@ -11,8 +11,8 @@ declare global {
       weekId: number;
     }
     interface PageData {
-      games: any[];
-      game: any;
+      games?: any[];
+      game?: any;
     }
     interface Platform {
       env: {
